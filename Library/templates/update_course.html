@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>UPDATE COURSE</h1>
+        <form action="{% url 'save_update_course' course.code %}" method="POST">
+            {% csrf_token %}
+            Course Code : <input type="text" name="code" value="{{course.code}}" disabled="false"> <br>
+            Description : <input type="text" name="description" value="{{course.description}}"> <br>
+            <input type="submit" value="save">
+        </form>
+        <table border="1">
+            <tr>
+                <th>Code</th>
+                <th>Description</th>
+            </tr>
+            {% for course in mycourse %}
+            <tr>
+                <td>{{ course.code }}</td>
+                <td>{{ course.description }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <p><a href="{% url 'Course' %}">BACK</a></p>
+    </body>
+</html>

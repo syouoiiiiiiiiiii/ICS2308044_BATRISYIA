@@ -1,0 +1,1 @@
+web : gunicorn ICS2308044_BATRISYIA.wsgi --log-file -

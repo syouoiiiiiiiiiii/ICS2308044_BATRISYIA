@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django</title>
+</head>
+<body>
+    <h1>WELCOME TO DJANGO VARIABLE</h1>
+    {% with name="NUR BATRISYIA" %}
+    <h1>Hello {{name}}, how are you?</h1>
+    {% endwith %}
+
+    {% if greeting == 1 %}
+    <h1>Enjoy your day !</h1>
+    {% else %}
+    <h1>bye</h1>
+    {% endif %}
+
+    <a href="view">display using variables from views</a><br>
+    <a href="dbstudent">display student class</a><br>
+    <a href="dbbook">display book class</a><br>
+    <a href="dbborrow">display borrow class</a><br>
+    <a href="course">course</a><br>
+    <a href="newmentor">mentor</a><br>
+    <a href="search_course">search course</a><br>
+    <a href="search_mentor">search mentor</a>
+</body>
+</html>

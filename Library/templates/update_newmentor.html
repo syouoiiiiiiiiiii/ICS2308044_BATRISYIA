@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h1>UPDATE NEWMENTOR</h1>
+        <form action="{% url 'save_update_newmentor' newmentor.menid %}" method="POST">
+            {% csrf_token %}
+            Mentor ID : <input type="text" name="menid" value="{{newmentor.menid}}" disabled="false"> <br>
+            Mentor Name : <input type="text" name="menname" value="{{newmentor.menname}}"> <br>
+            Mentor Room Number : <input type="text" name="menroomno" value="{{newmentor.menroomno}}"> <br>
+            <input type="submit" value="save">
+        </form>
+        <table border="1">
+            <tr>
+                <th>Mentor ID</th>
+                <th>Mentor Name</th>
+                <th>Mentor Room Number</th>
+                <th>Update</th>
+            </tr>
+            {% for x in mymentor %} 
+            <tr>
+                <td>{{ x.menid }}</td>
+                <td>{{ x.menname }}</td>
+                <td>{{ x.menroomno }}</td>
+                <td><a href="update_newmentor/{{newmentor.menid}}">Update</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <p><a href="{% url 'Mentor' %}">BACK</a></p>
+    </body>
+</html>

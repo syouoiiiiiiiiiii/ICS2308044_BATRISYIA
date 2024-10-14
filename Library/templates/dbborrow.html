@@ -1,0 +1,26 @@
+<html>
+<body>
+    <table border="1">
+        <tr>
+            <th>Borrow ID</th>
+            <th>Borrow Date</th>
+            <th>Return Date</th>
+            <th>Book ID</th>
+            <th>Student ID</th>
+        </tr>
+        {% for x in myborrow %}
+        <tr>
+        
+            <td>{{x.borrow_id}}</td>
+            <td>{{x.borrow_date}}</td>
+            <td>{{x.return_date}}</td>
+            <td>{{x.book_id_id}}</td>
+            <td>{{x.student_id_id}}</td>
+
+        </tr>
+
+        {% endfor %}
+    </table>
+    <p><a href="{% url 'index' %}">BACK TO HOMEPAGE</a></p>
+</body>
+</html>
